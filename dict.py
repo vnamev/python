@@ -26,17 +26,73 @@ print(dict_key[1]) # 2
 dict_key[4] = 16
 print(dict_key) # {1: 2, 2: 4, 3: 9, 4: 16}
 
+# удалить значение с ключом ['Vasek'] из словаря
+dictionary = {'Max': 'Developer', 'Vasek': 'NeDeveloper'}
+del dictionary['Vasek']
+print(dictionary)
+
 ############
 # методы словарей dict
 #
 
-dict.clear()
-dict.copy()
-dict.get()
-dict.items()
-dict.keys()
-dict.pop()
-dict.popitem()
-dict.setdefault()
-dict.update()
-dict.values()
+
+# dict.update()
+# Если нужно изменить и/или добавить несколько пар сразу.
+dictionary.update({
+    'Max': 'Developer by Python',
+    'спит': 'отдыхает и набирается богатырской силушкой',
+    'ест': 'пополняет жировые запасы...жирбаза, вали а бассик'
+})
+
+# dict.get()
+# возвращает значение по ключу. Если указанного ключа не существует, метод вернёт None.
+dictionary.get('Max') # {'Max': 'Developer'}
+dictionary.get('Nekto') # None
+dictionary.get('Nekto', 'Не существует ключа') # Значение по умолчанию "Не суще..." если данного ключа нет
+
+# dict.pop()
+# удаляет ключ и возвращает соответствующее ему значение. Принимает только один ключ.
+dictionary.pop('Max') # Удалит ключ и значение  - Вернёт -> Developer by Python
+
+# dict.keys()
+# возвращает коллекцию ключей
+dictionary.keys() # dict_keys(['спит', 'ест'])
+
+# dict.values()
+# возвращает коллекцию значений
+dictionary.values() # dict_values(['отдыхает и набирается богатырской силушкой', 'пополняет жировые запасы...жирбаза, вали а бассик'])
+
+
+# dict.items()
+# возвращает пару ключ - значение
+print(dictionary.items()) # dict_items([('спит', 'отдыхает и набирается богатырской силушкой'), ('ест', 'пополняет жировые запасы...жирбаза, вали а бассик')])
+print(dictionary)
+
+
+# dict.clear()
+# удаляет весь словарь
+print(dict_list.clear())
+
+
+
+############
+# Итерация словаря по for in
+#
+
+# по ключу key. Можно использовать имя словаря
+for key in dictionary:
+    print(key) # спит ест
+
+# по ключу key. Можно использовать метод .keys()
+for key in dictionary.keys():
+    print(key) # спит ест
+
+# по методу .items - получаем пару "ключ-значение" на каждую итерацию
+for key, value in dictionary.items():
+    print(key + " : " + value) # спит : отдыхает и набирается богатырской силушкой
+                                # ест : пополняет жировые запасы...жирбаза, вали а бассик
+
+for value in dictionary.values():
+    print(value) #отдыхает и набирается богатырской силушкой
+                 # пополняет жировые запасы...жирбаза, вали а бассик
+
