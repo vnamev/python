@@ -145,3 +145,62 @@ student_2 = Student('Vasis', 'S', 'T', 'women', '10.12.10', '+375445340362', 'MG
 print(student_1.get_fio(), student_1.get_dopinfo())
 print(student_1.university.get_university_info())
 print(student_2.university.get_university_info())
+
+
+
+###############
+# Принципы ООП
+#
+# 1. Наследование
+
+class Calc: # родительский класс
+    def __init__(self, number):
+        self.number = number
+
+    def calc_and_print(self):
+        value_to_print = self.calc_value()
+        self.print_number(value_to_print)
+
+    def calc_value(self):
+        return self.number * 10 + 2
+
+    def print_number(self, value_to_print):
+        print('-----')
+        print('Итого число: ', value_to_print)
+        print('-----')
+
+class CalcSquaredValue(Calc):  # дочерний класс
+    def calc_value(self):
+        return self.number**self.number
+
+num_1 = Calc(3)
+num_1.calc_and_print() # Итого число: 32
+
+num_2 = CalcSquaredValue(5)
+num_2.calc_and_print() # Итого число: 3125
+
+
+# 2. Инкапсуляция - скрываем реализацию от перезаписи
+class Example:
+    def __init__(self):
+        self.a = 1
+        self._b = 2
+        self.__c = 3
+        print('Тут все цифры: {} {} {}'.format(self.a, self._b, self.__c)) # 1 2 3 Так выводятся все числа в консоли
+
+    def call(self):
+        print('Called')
+
+example = Example()
+print(example.a)  # 1
+print(example._b)  # 2
+# print(example.__c)  # AttributeError: 'Example' object has no attribute '__c'
+
+
+# 3. Полиморфизм - возможность использовать ф-цию по разному, вне зависимости от типа их параметров
+# В данном примере мы можем складывать разные типы данных и одинаковые. Результат будет разный: либо складываем числа, либо складываем строки... как-то так.
+def sum_two_objects(one, two):
+    return one + two
+
+
+# 4. Абстракция - позволяет упрощать сложные задачи, создавая небольшие классы для решения простых.
