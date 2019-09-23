@@ -21,7 +21,7 @@ elif -5 <= a <= 5:
 else:
     print('Больше')
 
-# 3 for... применение else в совокупности с break - прерывает цикл
+# 3 if в цикле for... применение else в совокупности с break - прерывает цикл
 for i in 'hello world':
     if i == 'a':
         break

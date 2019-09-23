@@ -1,11 +1,12 @@
-# try:
-#     pass
-# except:
-#     pass
-# else:
-#     pass
-# finally:
-#     pass
+# Структура try - except
+try:
+    pass
+except:
+    pass
+else:
+    pass
+finally:
+    pass
 
 def calc(m):
     try:
