@@ -10,18 +10,18 @@ tuple - кортеж, неизменяемый список.
 # размер
 a = (1, 2, 3, 4, 5, 6)
 b = [1, 2, 3, 4, 5, 6]
-print(a.__sizeof__()) # 72
-print(b.__sizeof__()) # 88
-print(a) # (1, 2, 3, 4, 5, 6)
+print(a.__sizeof__())  # 72
+print(b.__sizeof__())  # 88
+print(a)  # (1, 2, 3, 4, 5, 6)
 
 # ключи в словаре / тип list не может быть ключом
-d = {(1, 1, 1) : 1}
-print(d.keys()) # dict_keys([(1, 1, 1)])
+d = {(1, 1, 1): 1}
+print(d.keys())  # dict_keys([(1, 1, 1)])
 
 #  создание кортежа tuple
-t_1 = tuple('max, sdfsdf') # ('m', 'a', 'x', ',', ' ', 's', 'd', 'f', 's', 'd', 'f')
+t_1 = tuple('max, sdfsdf')  # ('m', 'a', 'x', ',', ' ', 's', 'd', 'f', 's', 'd', 'f')
 t_2 = ()
-t_3 = ('max dfsdfdf', ) # ('max dfsdfdf',) запятая в конце обязательна - иначе это уже получится список
+t_3 = ('max dfsdfdf', )  # ('max dfsdfdf',) запятая в конце обязательна - иначе это уже получится список
 print(t_3)
 
-t = (5,'program', 1+3j) # (5, 'program', (1+3j))
+t = (5, 'program', 1+3j)  # (5, 'program', (1+3j))

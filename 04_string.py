@@ -1,4 +1,5 @@
-tripleString = """В такой "строке" мы можем 'использовать' все.""" # В такой "строке" мы можем 'использовать' все.
+# В такой "строке" мы можем 'использовать' все.
+tripleString = """В такой "строке" мы можем 'использовать' все."""
 
 # 1 конкатенация
 s1 = 'qwe'
@@ -22,6 +23,7 @@ print(S.find('l'))  # вернёт 2
 
 # 5.1 поиск в строке с конца
 print(S.rfind('l'))  # вернёт 3
+print(S.rfind('к'))  # вернёт -1
 
 # 6 метод replace
 print('Hello'.replace('l', 'L'))  # вернёт 'HeLLo'
@@ -30,6 +32,10 @@ print('Abrakadabra'.replace('a', 'A', 2)) # цифра 2 указывает на
 # 7 метод .split() Разбиение строки по разделителю (пустой или по запятой или еще какому)
 print('Maxon4eg from Mogilev Minsk'.split(" "))  # ['Maxon4eg', 'from', 'Mogilev']
 print("apple#banana#cherry#orange".split("#"))  # ['apple', 'banana', 'cherry', 'orange']
+
+# 8 метод .join() Сборка строки из списка с разделителем
+string_join = 'JOIN, Maxon4eg, from Mogilev Minsk'
+print(','.join(string_join))  # J,O,I,N, ,M,a,x,o,n,4,e,g, ,f,r,o,m, ,M,o,g,i,l,e,v, ,M,i,n,s,k
 
 # Форматирование строк %
 apple = 'Яблоко'
@@ -86,4 +92,4 @@ message = (
     f"You were in {affiliation}."
 )
 
-print(message) # Hi Max ON. You are a Fullstack  Dev. You were in Monty Python.
+print(message)  # Hi Max ON. You are a Fullstack  Dev. You were in Monty Python.

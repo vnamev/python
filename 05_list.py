@@ -53,23 +53,23 @@ print(random_list.count(4))
 
 # 3) - Sort по числам и строкам
 sort_list = [3, 7, 4, 2]
-sort_list.sort() # от меньшего к большему
-sort_list.sort(reverse=True) # от большего к меньшему
+sort_list.sort()  # от меньшего к большему
+sort_list.sort(reverse=True)  # от большего к меньшему
 
 sort_names = ['Steve', 'Rachel', 'Michael', 'Adam', 'Jessica', 'Lester']
-sort_names.sort() # сортировка по алфавиту ['Adam', 'Jessica', 'Lester', 'Michael', 'Rachel', 'Steve']
+sort_names.sort()  # сортировка по алфавиту ['Adam', 'Jessica', 'Lester', 'Michael', 'Rachel', 'Steve']
 
 # 4) - Append - добавляет в список 1 элемент в конец
 append_list = [7, 4, 3, 2]
 new_list = [1, 1, 1]
-append_list.append(3) # [7, 4, 3, 2, 3]
-append_list.append(4) # [7, 4, 3, 2, 3, 4]
-append_list.append(5) # [7, 4, 3, 2, 3, 4, 5]
-append_list.append(new_list) # [7, 4, 3, 2, 3, 4, 5, [1, 1, 1]] - добавляется массив в конец массива
+append_list.append(3)  # [7, 4, 3, 2, 3]
+append_list.append(4)  # [7, 4, 3, 2, 3, 4]
+append_list.append(5)  # [7, 4, 3, 2, 3, 4, 5]
+append_list.append(new_list)  # [7, 4, 3, 2, 3, 4, 5, [1, 1, 1]] - добавляется массив в конец массива
 
 # 5) - Remove - удаляет первое вхождение значения в списке
 remove_list = [7, 7, 4, 3, 2, 3]
-remove_list.remove(7) # удалит первый из одинаковых значений, принимает 1 значение
+remove_list.remove(7)  # удалит первый из одинаковых значений, принимает 1 значение
 
 # 6) - Pop - удаляет элемент в укзанном индексе
 pop_list = [7, 4, 3, 3]
@@ -88,7 +88,10 @@ insert_list = [7, 3, 3, 4, 5]
 insert_list.insert(3, ['Max', True]) # где 3 - номер индекса
 print(insert_list) #[7, 3, 3, ['Max', True], 4, 5]
 
-
+# 9) - Copy -поверхностная копия списка
+copy_list = [[7, 3, 3, 4, 5], ['Max', 'No More Max', True], 10, 23]
+new_copy_list = copy_list.copy()
+print(new_copy_list)  # [[7, 3, 3, 4, 5], ['Max', 'No More Max', True], 10, 23]
 
 ############
 # Простые операции над списками
@@ -96,11 +99,11 @@ print(insert_list) #[7, 3, 3, ['Max', True], 4, 5]
 
 # Есть ли элемент в списке "x in s" - True если элемент x находится в списке
 x_list = [2, 4, 9, "Max"]
-print('Max' in x_list) # True - есть в списке
+print('Max' in x_list)  # True - есть в списке
 
 # Есть ли элемент в списке "x in s" - True если элемент x не находится в списке
 y_list = [1, 44, 99, "Maxon4eg"]
-print('Janeee' not in x_list) # True - нет в списке
+print('Janeee' not in x_list)  # True - нет в списке
 
 # Конкатенация списков  x + y
 list_xy = x_list + y_list

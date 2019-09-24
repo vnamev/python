@@ -1,0 +1,62 @@
+@media screen and (max-width: 900px) {
+    .enter-pass {
+        width: 100%;
+        max-width: 690px;
+        height: auto;
+    }
+    .enter-pass .pass-field {
+        width: 70%;
+        min-width: auto;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .enter-pass{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .enter-pass input{
+        width: 100%;
+    }
+    .enter-pass .pass-field > div{
+        margin: 0 auto;
+    }
+    .enter-pass .pass-field .link {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .enter-pass .buttons-block {
+        max-width: 100%;
+    }
+    .enter-pass input {
+        text-align: center;
+        width: 213px;
+    }
+    .help-block{
+        width: 100%;
+        height: auto;
+    }
+    .help-block{
+        height: 200px;
+        left: 0;
+    }
+    .enter-pass .pass-field {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    html, body {
+        min-width: 350px;
+    }
+    .help-block{
+        height: 230px;
+        padding: 50px 15px 15px 15px;
+    }
+}
